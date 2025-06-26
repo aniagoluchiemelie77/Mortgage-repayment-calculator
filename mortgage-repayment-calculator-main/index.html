@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+  <div class="container">
+    <form class="container-left" id="form">
+      <div class="container-left_header">
+        <h1> Mortgage Calculator</h1>
+        <a>Clear All</a>
+      </div>
+      <div class="container-left_div1 inputdiv">
+        <label> Mortgage Amount</label>
+        <div class="container-left_input input1">
+           <span>&#163;</span>
+           <input type="number" class="amount" />
+        </div>
+        <span class="error-message">This field is required</span>
+      </div>
+      <div class="container-left_div2">
+        <div class="container-left_div2_subdiv inputdiv">
+          <label> Mortgage Term</label>
+          <div class="input2">
+            <input type="number" class="term"/>
+            <span>Years</span>
+          </div>
+          <span class="error-message">This field is required</span>
+        </div>
+        <div class="container-left_div2_subdiv inputdiv">
+          <label>  Interest Rate</label>
+          <div class="input2 first">
+            <input type="number" class="percent"/>
+            <span>%</span>
+          </div>
+          <span class="error-message">This field is required</span>
+        </div>
+      </div>
+      <div class="container-left_div3">
+        <label>Mortgage Type</label>
+        <div class="custom-radio">
+        <label>
+          <input type="radio" name="option" value="repayment" />
+          <span class="radio-mark"></span>
+          <p>Repayment</p>
+        </label>
+      </div>
+<div class="custom-radio">
+  <label>
+    <input type="radio" name="option" value="interestOnly" />
+    <span class="radio-mark"></span>
+    <p>Interest Only</p>
+  </label>
+</div>
+
+      </div>
+      <div class="container-left_div4">
+        <button> <i class="fa-solid fa-calculator"></i>Calculate Repayments</button>
+      </div>
+    </form>
+    <div class="container-right">
+      <div class="container-right_notactive">
+        <img src="assets\images\illustration-empty.svg"/>
+        <h2>Results shown here</h2>
+        <p> Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+      </div>
+      <div class="container-right_active">
+        <h2 class="header-right"> Your results</h2>
+        <p>Your results are shown below based on the information you provided. 
+             To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+        <div class="container-right_active_subdiv">
+          <p>  Your monthly repayments</p>
+          <h1 id="monthly">&#163;</h1>
+          <p>  Total you'll repay over the term</p>
+          <h2 id="total">&#163;</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

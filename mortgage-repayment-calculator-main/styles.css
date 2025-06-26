@@ -1,0 +1,309 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-behavior: cubic-bezier(0.2, 0, 0.38, 1);
+}
+body{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    background-color: hsl(202, 86%, 94%);
+    align-items: center;
+    height: 100vh;
+}
+ p{
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.5;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 55vw;
+    height: 45rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-left{
+    width: 50%;
+    padding: 2rem;
+}
+.container-left_header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 1rem;
+}
+.container-left_header h1{
+    font-size: 2.2rem;
+}
+.container-left_header a{
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: hsl(203, 41%, 72%);
+}
+.inputdiv{
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem 0;
+}
+ label{
+    font-size: 1.3rem;
+    color: hsl(200, 24%, 40%);
+    padding-bottom: .8rem;
+}
+.container-left_div2{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+.container-left_input{
+    width: 100%;
+    background-color: hsl(202, 86%, 94%);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid hsl(200, 24%, 40%);
+}
+.container-left_input:hover{
+    border: 1px solid #4f4f4f;
+}
+.container-left_input input{
+    width: 90%;
+    padding: 1rem;
+    border: none;
+    font-size: 1.4rem;
+}
+ input:focus{
+    border: none;
+    outline: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.container-left_input span{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.59rem;
+}
+.error-message{
+    color: hsl(4, 69%, 50%);
+    padding-top: 1rem;
+    display: none;
+}
+.input2{
+    width: 100%;
+    background-color: hsl(202, 86%, 94%);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: 1px solid hsl(200, 24%, 40%);
+}
+.input2:hover{
+    border: 1px solid #4f4f4f;
+}
+.input2 input{
+    padding: 1rem;
+    width: 75%;
+    font-size: 1.5rem;
+    border: none;
+}
+.input2 span{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.first{
+    margin-left: 1rem;
+}
+.container-left_div3{
+    display: flex;
+    flex-direction: column;
+}
+.container-left_div3 div{
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.container-left_div3 div p{
+    margin-left: 1rem;
+    color: hsl(202, 55%, 16%);
+}
+.container-left_div4{
+    padding: 1.2rem 0;
+    width: 100%;
+    height: fit-content;
+}
+.container-left_div4 button{
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    width: 70%;
+    height: fit-content;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+    color: hsl(202, 55%, 16%);
+    background-color: hsl(61, 70%, 52%);
+    font-weight: 700;
+}
+.container-left_div4 button i{
+    margin-right: 1rem;
+    font-weight: 800;
+}
+.container-right{
+    background-color: hsl(202, 55%, 16%);
+    height: 50rem;
+    width: 54%;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    position: absolute;
+    right: -3.5rem;
+    bottom: .1rem;
+}
+.container-right_active{
+   min-height: 100%;
+   margin-top: 6rem;
+   padding: 2rem;
+   display: none;
+   flex-direction: column;
+}
+.container-right_notactive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-right_notactive img{
+    height: 13rem;
+    width: 13rem;
+    object-fit: cover;
+}
+.container-right_notactive h2{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+.container-right_notactive p{
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;
+    color: hsl(203, 41%, 72%);
+}
+.container-right_active h2{
+   color: hsl(0, 2%, 89%);
+   font-size: 2rem;
+}
+.container-right_active p{
+   color: hsl(203, 41%, 72%);
+   font-size: 1.3rem;
+   padding: 1rem 1rem 1rem 0;
+}
+.container-right_active_subdiv{
+    padding: 1.2rem 1.4rem;
+    background-color: hsl(201, 57%, 11%);
+    border-top: 2px solid hsl(61, 70%, 52%);
+    margin: 1rem 2rem 1rem 0;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.container-right_active_subdiv h1{
+    padding: 1rem 0;
+    color: hsl(61, 70%, 52%);
+    font-size: 3rem;
+}
+.header-right{
+    padding: 1rem 0;
+}
+input[type="radio"] {
+  display: none;
+}
+.custom-radio {
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #222;
+}
+.custom-radio label{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-mark {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid #888;
+  margin-right: 8px;
+  background-color: inherit;
+  position: relative;
+  padding: .2rem;
+}
+input[type="radio"]:checked {
+  border: 1px solid hsl(61, 70%, 52%);
+}
+input[type="radio"]:checked + .radio-mark {
+  border: 1px solid hsl(61, 70%, 52%);
+}
+.radio-mark::after {
+  content: "";
+  position: absolute;
+  top: 1.8px;
+  left: 1.8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: hsl(61, 70%, 52%);
+  display: none;
+}
+
+input[type="radio"]:checked + .radio-mark::after {
+  display: block;
+}
+.selected{
+    background-color: hsl(62, 65%, 80%);
+}
